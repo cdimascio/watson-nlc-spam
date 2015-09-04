@@ -1,17 +1,125 @@
-This README.md file is displayed on your project page. You should edit this 
-file to describe your project, including instructions for building and 
-running the project, pointers to the license under which you are making the 
-project available, and anything else you think would be useful for others to
-know.
+Overview - Watson NLC Spam Example
+==================================
 
-We have created an empty license.txt file for you. Well, actually, it says,
-"<Replace this text with the license you've chosen for your project.>" We 
-recommend you edit this and include text for license terms under which you're
-making your code available. A good resource for open source licenses is the 
-[Open Source Initiative](http://opensource.org/).
+This project contains:
 
-Be sure to update your project's profile with a short description and 
-eye-catching graphic.
+-   Training data
 
-Finally, consider defining some sprints and work items in Track & Plan to give 
-interested developers a sense of your cadence and upcoming enhancements.
+-   Test data
+
+-   Python script to measure accuracy
+
+ 
+
+Project
+-------
+
+This project describes a very simple way to train a Watson Natural Language
+Classifier and validate its accuracy.
+
+ 
+
+### Prerequisites
+
+-   [Python](<https://www.python.org/downloads/>)
+
+-   [curl](<http://curl.haxx.se/download.html>)
+
+-   [Bluemix Account](<www.bluemix.net>)
+
+-   An instance of the Watson Naturual Language Classifier Bluemix service (see
+    blog)
+
+ 
+
+#### Layout
+
+-   `data/SpamHam-Train.json` - SpamHam training data
+
+-   `data/SpamHam-Test.json` - SpamHam test data
+
+-   `spam.py` - a python script used to measure the accuracy of the classifier
+
+ 
+
+Data files are a transform of [SMS Spam Collection
+v.1](<<http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/> >)[ (UCI's SMS
+Spam Collectoin Data
+Set](<https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection>))
+
+ 
+
+#### Train the Spam classifier
+
+Training the classifier is easy. Simply, provide training data in a Watson NLC
+compatible format and POST a request to the Watson NLC `/classifiers` REST
+endpoint.
+
+Here's how:
+
+-   `curl -X POST -u username:password  -H "Content-Type:application/json" -d
+    @data/SpamHam-Train.json
+    https://gateway.watsonplatform.net/natural-language-classifier-experimental/api/v1/classifiers`
+
+ 
+
+Note: open` data/SpamHam-Train.json` to view the data format
+
+ 
+
+#### Measure Accuracy of the Spam classifier
+
+-   Run `python spam.nlc`
+
+ 
+
+About the Data
+--------------
+
+The SMS Spam Collection v.1 is a public set of SMS labeled messages that have
+been collected for mobile phone spam research. It has one collection composed
+by 5,574 English, real and non-enconded messages, tagged according being
+legitimate (ham) or spam.
+
+ 
+
+More information can be found
+[here](<http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/>)
+
+ 
+
+A comprehensive study of this data can be found in the following papers:
+
+-   Almeida, T.A., Gómez Hidalgo, J.M., Yamakami, A. Contributions to the Study
+    of SMS Spam Filtering: New Collection and Results. Proceedings of the 2011
+    ACM Symposium on Document Engineering (DOCENG'11), Mountain View, CA, USA,
+    2011.
+    ([preprint](<http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/doceng11.pdf>))
+
+-   Gómez Hidalgo, J.M., Almeida, T.A., Yamakami, A. On the Validity of a New
+    SMS Spam Collection. Proceedings of the 11th IEEE International Conference
+    on Machine Learning and Applications (ICMLA'12), Boca Raton, FL, USA, 2012.
+    ([preprint](<http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/icmla12.pdf>))
+
+-   Almeida, T.A., Gómez Hidalgo, J.M., Silva, T.P. Towards SMS Spam Filtering:
+    Results under a New Dataset. International Journal of Information Security
+    Science (IJISS), 2(1), 1-18. (Invited paper - [full
+    version](<http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/IJISS13.pdf>))
+
+ 
+
+License (code)
+--------------
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ http://www.apache.org/licenses/LICENSE-2.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Unless required by applicable law or agreed to in writing, software distributed
+under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+CONDITIONS OF ANY KIND, either express or implied. See the License for the
+specific language governing permissions and limitations under the License.
