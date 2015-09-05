@@ -3,16 +3,17 @@ __author__ = 'dimascio'
 import requests
 import json
 
-
+# Replace YOUR_CLASSIFIER_ID, YOUR_CLASSIFIER_USERNAME, and YOUR_CLASSIFIER_PASSWORD
+# with the information provided in your classifier's credentials object
 def classify(s):
     """
     Returns the predicted class for the given string
     :param s:
     :return:
     """
-    r = requests.post("https://gateway.watsonplatform.net/natural-language-classifier-experimental/api/v1/classifiers/FD882C-nlc-4/classify",
+    r = requests.post("https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/YOUR_CLASSIFER_ID/classify",
                       json.dumps({'text':s}),
-                      auth=('fd75815e-277e-4145-b57c-299deda1cdf3', '83fqIWieQauQ'),
+                      auth=(YOUR_CLASSIFIER_USERNAME, YOUR_CLASSIFY_PASSWORD),
                       headers={'Content-Type': 'application/json'})
     return r;
 

@@ -47,7 +47,9 @@ v.1](<<http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/> >)[ (UCI's SMS
 Spam Collectoin Data
 Set](<https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection>))
 
- 
+#### Create an NL Classifier instance using Bluemix
+-   Go to www.bluemix.net
+-   From the Bluemix catalog, select Watson Natural Language Classifier
 
 #### Train the Spam classifier
 
@@ -59,7 +61,7 @@ Here's how:
 
 -   `curl -X POST -u username:password  -H "Content-Type:application/json" -d
     @data/SpamHam-Train.json
-    https://gateway.watsonplatform.net/natural-language-classifier-experimental/api/v1/classifiers`
+    https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers`
 
  
 
@@ -68,8 +70,9 @@ Note: open` data/SpamHam-Train.json` to view the data format
  
 
 #### Measure Accuracy of the Spam classifier
+-   Open `spam.py` and supply values for YOUR_CLASSIFIER_ID, YOUR_CLASSIFIER_USERNAME, and YOUR_CLASSIFIER_PASSWORD.
 
--   Run `python spam.nlc`
+-   Run `python spam.py`
 
  
 
