@@ -15,6 +15,7 @@
         }).fail(function(err) {
             renderAnswer(err);
         });
+        return false;
     }
 
     function onExamplesClick() {
@@ -38,5 +39,4 @@
         $('.answers').show();
         $('.loading').hide();
     }
-
 }());

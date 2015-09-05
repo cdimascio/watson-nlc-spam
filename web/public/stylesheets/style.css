@@ -1,3 +1,15 @@
+.header h1 {
+  color: #00B2EF;
+  font-size: 50px;
+}
+
+.input-lg {
+  height: 44px;
+}
+
+.btn-lg {
+  border: solid 1px;
+}
 .row {
   padding-bottom: 20px;
 }
@@ -24,4 +36,20 @@
   border-radius: 4px;
   -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
   box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.jumbotron {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  color: inherit;
+  background-color: #eee;
+}
+
+@media screen and (min-width: 768px) {
+  .container .jumbotron, .container-fluid .jumbotron {
+    /* padding-right: 60px; */
+    padding-left: 20px;
+  }
 }
