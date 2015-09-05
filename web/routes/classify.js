@@ -35,14 +35,8 @@ function classify(req, res) {
   });
 
   function creds() {
-    console.dir(process.env);
-    console.log(process.env.VCAP_SERVICES.user_provided[0].credentials);
-    return process.env.VCAP_SERVICES.user_provided[0].credentials;
-    //return {
-    //  "url": "https://gateway.watsonplatform.net/natural-language-classifier-experimental/api",
-    //  "username": "4b1b9671-e876-46d0-8e72-65d640624b6c",
-    //  "password": "Zm9spFkRXJUM"
-    //}
+    // Extract Bluemix creds for Watson NLC service
+    return (JSON.parse(process.env.VCAP_SERVICES)).natural_language_classifier[0].credentials;
   }
 }
 

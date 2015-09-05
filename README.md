@@ -40,6 +40,8 @@ Classifier and validate its accuracy.
 
 -   `spam.py` - a python script used to measure the accuracy of the classifier
 
+-   `web/` - The node.js based web demo (http://watsonnlcspam.mybluemix.net)
+
  
 
 Data files are a transform of [SMS Spam Collection
