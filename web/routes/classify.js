@@ -29,8 +29,9 @@ function classify(req, res) {
     } else {
       if (resp.statusCode !== 200) {
         res.status(resp.statusCode).send()
+      } else {
+        res.json(body);
       }
-      res.json(body);
     }
   });
 
