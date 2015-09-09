@@ -34,7 +34,7 @@ Classifier and validate its accuracy.
 
 #### Layout
 
--   `data/SpamHam-Train.json` - SpamHam training data
+-   `data/SpamHam-Train.csv` - SpamHam training data
 
 -   `data/SpamHam-Test.json` - SpamHam test data
 
@@ -61,13 +61,12 @@ endpoint.
 
 Here's how:
 
--   `curl -X POST -u username:password  -H "Content-Type:application/json" -d
-    @data/SpamHam-Train.json
-    https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers`
+-   `curl -X POST -u username:password  -F training_data=@SpamHam-Train.csv 
+    -F training_metadata="{\"language\":\"en\",\"name\":\"My Classifier\"}" 
+    "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"  
 
- 
 
-Note: open` data/SpamHam-Train.json` to view the data format
+Note: open` data/SpamHam-Train.csv` to view the data format
 
  
 
