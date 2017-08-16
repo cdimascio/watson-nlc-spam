@@ -1,5 +1,9 @@
-Overview - Watson NLC Spam Example
-==================================
+# watson-nlc-spam
+
+Create a spam classifier with Watson Natural Language Classifier. This repo provides code samples and instruction to support the IBM developerWorks article, ["Create a natural language classifier that identifies spam"](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html).
+
+Learn how to train a spam classfier, validate its accuracy, and use it to classify new texts. You'll do it with Watson Natural Language Classifier
+
 
 This project contains:
 
@@ -7,18 +11,10 @@ This project contains:
 
 -   Test data
 
--   Python script to measure accuracy
-
+-   a Python script to measure accuracy
  
 
-Project
--------
-
-This project describes a very simple way to train a Watson Natural Language
-Classifier and validate its accuracy.
-
- 
-
+## What you'll need
 ### Prerequisites
 
 -   [Python](<https://www.python.org/downloads/>)
@@ -30,7 +26,7 @@ Classifier and validate its accuracy.
 -   An instance of the Watson Naturual Language Classifier Bluemix service (see
     blog)
 
- 
+## How is this repo organized
 
 #### Layout
 
@@ -43,14 +39,20 @@ Classifier and validate its accuracy.
 -   `web/` - The node.js based web demo (http://watsonnlcspam.mybluemix.net)
 
  
+#### The data
 
 Data files are a transform of [SMS Spam Collection
 v.1](<<http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/> >)[ (UCI's SMS
 Spam Collectoin Data
 Set](<https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection>))
 
+## How to:
+See ["Create a natural language classifier that identifies spam"](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html) for details. 
+
+Below is a rough outline.
+
 #### Create an NL Classifier instance using Bluemix
--   Go to www.bluemix.net
+-   Go to [Bluemix](www.bluemix.net)
 -   From the Bluemix catalog, select Watson Natural Language Classifier
 
 #### Train the Spam classifier
@@ -59,16 +61,15 @@ Training the classifier is easy. Simply, provide training data in a Watson NLC
 compatible format and POST a request to the Watson NLC `/classifiers` REST
 endpoint.
 
-Here's how:
+- Open` data/SpamHam-Train.csv` to view the data format
+- Train Watson NLC
 
--   `curl -X POST -u username:password  -F training_data=@SpamHam-Train.csv 
-    -F training_metadata="{\"language\":\"en\",\"name\":\"My Classifier\"}" 
-    "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"  
+	```
+	curl -X POST -u username:password  -F training_data=@SpamHam-Train.csv 
+   	  -F training_metadata="{\"language\":\"en\",\"name\":\"My Classifier\"}" 
+     "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"  
+	```
 
-
-Note: open` data/SpamHam-Train.csv` to view the data format
-
- 
 
 #### Measure Accuracy of the Spam classifier
 -   Open `spam.py` and supply values for YOUR_CLASSIFIER_ID, YOUR_CLASSIFIER_USERNAME, and YOUR_CLASSIFIER_PASSWORD.
@@ -77,21 +78,18 @@ Note: open` data/SpamHam-Train.csv` to view the data format
 
  
 
-About the Data
---------------
+## About the Data
 
 The SMS Spam Collection v.1 is a public set of SMS labeled messages that have
 been collected for mobile phone spam research. It has one collection composed
 by 5,574 English, real and non-enconded messages, tagged according being
 legitimate (ham) or spam.
 
- 
 
 More information can be found
 [here](<http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/>)
 
  
-
 A comprehensive study of this data can be found in the following papers:
 
 -   Almeida, T.A., Gómez Hidalgo, J.M., Yamakami, A. Contributions to the Study
@@ -112,8 +110,7 @@ A comprehensive study of this data can be found in the following papers:
 
  
 
-License (code)
---------------
+## License
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use
 this file except in compliance with the License. You may obtain a copy of the
