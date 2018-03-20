@@ -46,7 +46,7 @@ v.1](<<http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/> >)[ (UCI's SMS
 Spam Collectoin Data
 Set](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection))
 
-## How to:
+## How-To
 
 See the ["Create a natural language classifier that identifies spam"](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html) developerWorks article for details or (for less detail) follow the general outline below.
 
