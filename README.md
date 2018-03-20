@@ -4,7 +4,7 @@ Create a spam classifier with Watson Natural Language Classifier. This repo prov
 
 Learn how to train a spam classfier, validate its accuracy, and use it to classify new texts. You'll do it with Watson Natural Language Classifier
 
-![](https://raw.githubusercontent.com/cdimascio/watson-nlc-spam/master/assets/watson-nlc.png | width=300)
+<img src="https://raw.githubusercontent.com/cdimascio/watson-nlc-spam/master/assets/watson-nlc.png" data-canonical-src="https://raw.githubusercontent.com/cdimascio/watson-nlc-spam/master/assets/watson-nlc.png" width="300" />
 
 This project contains:
 
@@ -70,8 +70,11 @@ endpoint.
       	curl -X POST -u username:password  -F training_data=@SpamHam-Train.csv
 
   -F training_metadata="{\"language\":\"en\",\"name\":\"My Classifier\"}"
-  "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"  
-   ```
+  "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
+
+  ```
+
+  ```
 
 #### Measure Accuracy of the Spam classifier
 
