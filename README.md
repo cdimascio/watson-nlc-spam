@@ -22,9 +22,9 @@ This project contains:
 
 -   [curl](<http://curl.haxx.se/download.html>)
 
--   [Bluemix Account](<www.bluemix.net>)
+-   [IBM Cloud Account](<www.bluemix.net>)
 
--   An instance of the Watson Naturual Language Classifier Bluemix service (see
+-   An instance of the Watson Naturual Language Classifier service on IBM Cloud (see
     blog)
 
 ## How is this repo organized
@@ -52,9 +52,9 @@ See ["Create a natural language classifier that identifies spam"](https://www.ib
 
 Below is a rough outline.
 
-#### Create an NL Classifier instance using Bluemix
--   Go to [Bluemix](www.bluemix.net)
--   From the Bluemix catalog, select Watson Natural Language Classifier
+#### Create an NL Classifier instance on IBM Cloud
+-   Go to [IBM Cloud](www.bluemix.net)
+-   From the IBM Cloud catalog, select Watson Natural Language Classifier
 
 #### Train the Spam classifier
 
