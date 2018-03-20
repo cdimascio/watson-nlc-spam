@@ -1,8 +1,8 @@
 # watson-nlc-spam
 
-Create a spam classifier with Watson Natural Language Classifier. This repo provides code samples and instruction to support the IBM developerWorks article, ["Create a natural language classifier that identifies spam"](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html).
-
 <img src="https://raw.githubusercontent.com/cdimascio/watson-nlc-spam/master/assets/watson-nlc.png"  width="200"  align="right" /></br>
+
+Create a spam classifier with Watson Natural Language Classifier. This repo provides code samples and instruction to support the IBM developerWorks article, ["Create a natural language classifier that identifies spam"](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html).
 
 Learn how to train a spam classfier, validate its accuracy, and use it to classify new texts. You'll do it with Watson Natural Language Classifier
 
