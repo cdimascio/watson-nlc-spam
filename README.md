@@ -48,16 +48,14 @@ Set](https://archive.ics.uci.edu/ml/datasets/SMS+Spam+Collection))
 
 ## How to:
 
-See ["Create a natural language classifier that identifies spam"](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html) for details.
+See the ["Create a natural language classifier that identifies spam"](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html) developerWorks article for details or (for less detail) follow the general outline below.
 
-Below is a rough outline.
-
-#### Create an NL Classifier instance on IBM Cloud
+#### Create a NL Classifier instance on IBM Cloud
 
 * Go to [IBM Cloud](www.bluemix.net)
 * From the IBM Cloud catalog, select Watson Natural Language Classifier
 
-#### Train the Spam classifier
+#### Train the NL classifier using Spam/Ham data
 
 Training the classifier is easy. Simply, provide training data in a Watson NLC
 compatible format and POST a request to the Watson NLC `/classifiers` REST
@@ -74,7 +72,10 @@ endpoint.
 
 #### Measure Accuracy of the Spam classifier
 
-* Open `spam.py` and supply values for `YOUR_CLASSIFIER_ID`, `YOUR_CLASSIFIER_USERNAME`, and `YOUR_CLASSIFIER_PASSWORD`.
+* Open `spam.py` and supply values for:
+	*  `YOUR_CLASSIFIER_ID`
+	*  `YOUR_CLASSIFIER_USERNAME`
+	*  `YOUR_CLASSIFIER_PASSWORD`
 
 * Run `python spam.py`
 
