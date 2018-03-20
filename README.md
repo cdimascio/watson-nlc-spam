@@ -71,10 +71,7 @@ endpoint.
 
   -F training_metadata="{\"language\":\"en\",\"name\":\"My Classifier\"}"
   "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
-
-  ```
-
-  ```
+		```
 
 #### Measure Accuracy of the Spam classifier
 
@@ -112,4 +109,5 @@ A comprehensive study of this data can be found in the following papers:
 ## License
 
 [Apache 2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
 see [](LICENSE)
