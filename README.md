@@ -74,7 +74,7 @@ endpoint.
 
 #### Measure Accuracy of the Spam classifier
 
-* Open `spam.py` and supply values for YOUR_CLASSIFIER_ID, YOUR_CLASSIFIER_USERNAME, and YOUR_CLASSIFIER_PASSWORD.
+* Open `spam.py` and supply values for `YOUR_CLASSIFIER_ID`, `YOUR_CLASSIFIER_USERNAME`, and `YOUR_CLASSIFIER_PASSWORD`.
 
 * Run `python spam.py`
 
