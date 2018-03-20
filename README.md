@@ -67,7 +67,8 @@ endpoint.
 * Train Watson NLC
 
 	```
-   curl -X POST -u username:password  -F training_data=@SpamHam-Train.csv -F training_metadata="{\"language\":\"en\",\"name\":\"My Classifier\"}"
+   curl -X POST -u username:password  -F training_data=@SpamHam-Train.csv \
+   -F training_metadata="{\"language\":\"en\",\"name\":\"My Classifier\"}" \
   "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
 	```
 
