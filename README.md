@@ -107,7 +107,7 @@ A comprehensive study of this data can be found in the following papers:
   version](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/IJISS13.pdf))
 
 ## Links
-- [Medium article - by Zio Mohammad](https://medium.com/ibm-watson/identify-spam-with-watson-natural-language-classifier-42f273d310f4)
+- [Medium article - by Zia Mohammad](https://medium.com/ibm-watson/identify-spam-with-watson-natural-language-classifier-42f273d310f4)
 - [developerWorks article - by Carmine DiMascio](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html)
 
 
