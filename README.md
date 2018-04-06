@@ -6,6 +6,8 @@ Create a spam classifier with Watson Natural Language Classifier. This repo prov
 
 Learn how to train a spam classfier, validate its accuracy, classify new texts, and run it as a web application. You'll do it all with Watson Natural Language Classifier.
 
+### Watch the Tutoral Video
+
 [![Watch the tutorial video](https://raw.githubusercontent.com/cdimascio/watson-nlc-spam/master/assets/poster.png)](https://www.youtube.com/watch?v=upK42t7Ojls&feature=youtu.be)
 
 This project contains:
