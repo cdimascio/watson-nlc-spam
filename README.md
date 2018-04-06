@@ -4,7 +4,7 @@
 
 Create a spam classifier with Watson Natural Language Classifier. This repo provides code samples and instruction to support the IBM developerWorks article, ["Create a natural language classifier that identifies spam"](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html).
 
-Learn how to train a spam classfier, validate its accuracy, and use it to classify new texts. You'll do it with Watson Natural Language Classifier
+Learn how to train a spam classfier, validate its accuracy, classify new texts, and run it as a web application. You'll do it all with Watson Natural Language Classifier.
 
 This project contains:
 
@@ -64,27 +64,28 @@ endpoint.
 * Open`data/SpamHam-Train.csv` to view the data format
 * Train Watson NLC
 
-	```
-   curl -X POST -u username:password  -F training_data=@SpamHam-Train.csv \
+      	```
+
+  curl -X POST -u username:password -F training_data=@SpamHam-Train.csv \
    -F training_metadata="{\"language\":\"en\",\"name\":\"My Classifier\"}" \
   "https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers"
-	```
+  ```
 
 #### Measure Accuracy of the Spam classifier
 
 * Open `spam.py` and supply values for:
-	*  `YOUR_CLASSIFIER_ID`
-	*  `YOUR_CLASSIFIER_USERNAME`
-	*  `YOUR_CLASSIFIER_PASSWORD`
+  _ `YOUR_CLASSIFIER_ID`
+  _ `YOUR_CLASSIFIER_USERNAME` \* `YOUR_CLASSIFIER_PASSWORD`
+
+* Run `pip install requests`
 
 * Run `python spam.py`
 
 ## About the Data
 
-The SMS Spam Collection v.1 is a public set of SMS labeled messages that have
-been collected for mobile phone spam research. It has one collection composed
-by 5,574 English, real and non-enconded messages, tagged according being
-legitimate (ham) or spam.
+Use [Watson Natural Language Classifier](https://www.ibm.com/watson/services/natural-language-classifier/) to predict spam. The training data is a public set of 5,574 English SMS messages collected for mobile phone spam research.
+
+The SMS Spam Collection v.1 is a public set of SMS labeled messages that have been collected for mobile phone spam research. It has one collection composed by 5,574 English, real and non-encoded messages, tagged according being legitimate (ham) or spam. More information can be found here.
 
 More information can be found
 [here](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/)
@@ -107,9 +108,9 @@ A comprehensive study of this data can be found in the following papers:
   version](http://www.dt.fee.unicamp.br/~tiago/smsspamcollection/IJISS13.pdf))
 
 ## Links
-- [Medium article - by Zia Mohammad](https://medium.com/ibm-watson/identify-spam-with-watson-natural-language-classifier-42f273d310f4)
-- [developerWorks article - by Carmine DiMascio](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html)
 
+* [Medium article - by Zia Mohammad](https://medium.com/ibm-watson/identify-spam-with-watson-natural-language-classifier-42f273d310f4)
+* [developerWorks article - by Carmine DiMascio](https://www.ibm.com/developerworks/library/cc-spam-classification-service-watson-nlc-bluemix-trs/index.html)
 
 ## License
 
