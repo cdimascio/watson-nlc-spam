@@ -6,7 +6,7 @@ import json
 # Replace YOUR_CLASSIFIER_ID, YOUR_CLASSIFIER_USERNAME, and YOUR_CLASSIFIER_PASSWORD
 # with the information provided in your classifier's credentials object
 def classify(s):
-    return requests.post("https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/842c77x336-nlc-688/classify",
+    return requests.post("https://gateway.watsonplatform.net/natural-language-classifier/api/v1/classifiers/YOUR_CLASSIFIER_ID/classify",
                       json.dumps({'text':s}),
                       auth=(YOUR_CLASSIFIER_USERNAME, YOUR_CLASSIFY_PASSWORD),
                       headers={'Content-Type': 'application/json'})
