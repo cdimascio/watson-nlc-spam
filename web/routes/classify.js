@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var classifierId = '3EF77E-nlc-312';
+var classifierId = process.env.CLASSIFIER_ID || '3EF77E-nlc-312';
 
 router.post('/', function(req, res, next) {
   classify(req, res);
