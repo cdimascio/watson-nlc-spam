@@ -12,6 +12,7 @@
     "express": "~4.12.2",
     "morgan": "~1.5.1",
     "request": "^2.61.0",
-    "serve-favicon": "~2.2.0"
+    "serve-favicon": "~2.2.0",
+    "watson-developer-cloud": "^3.5.1"
   }
 }
