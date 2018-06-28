@@ -3,7 +3,7 @@ var router = express.Router();
 var request = require('request');
 var NLC = require('watson-developer-cloud/natural-language-classifier/v1');
 
-var classifierId = '3EF77E-nlc-312';
+var classifierId = process.env.CLASSIFIER_ID || '3EF77E-nlc-312';
 
 router.post('/', function(req, res, next) {
   classify(req, res);
